@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 0.5.0 (2020-11-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* there are multiple breaking changes in in how github components are used.
+
+### Features
+
+* consolidate github capabilities behind a centralized api ([#319](https://github.com/projen/projen/issues/319)) ([19815c1](https://github.com/projen/projen/commit/19815c19c8aa6185311dd2851510c7bb91abb120)), closes [#318](https://github.com/projen/projen/issues/318)
+
+## 0.4.0 (2020-11-24)
+
+
+### ⚠ BREAKING CHANGES
+
+* The `CompositeProject` and `ProjectComponent` classes have been superseded by subprojects in order to allow safely accessing the parent project during subproject initialization phase. Use `new Project({ parent, outdir })` to define this relationship.
+* The various `synth()` methods no longer accept an `outdir`. Instead, specify `outdir` in the project options.
+
+### Features
+
+* subprojects ([#332](https://github.com/projen/projen/issues/332)) ([53244ae](https://github.com/projen/projen/commit/53244aef42258344c90e5f08241cb61c2e4566b6)), closes [#289](https://github.com/projen/projen/issues/289)
+
 ### 0.3.178 (2020-11-23)
 
 

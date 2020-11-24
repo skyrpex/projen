@@ -113,8 +113,6 @@ export class Project {
     // we only allow these global services to be used in root projects
     this.github = !this.parent ? new GitHub(this) : undefined;
     this.vscode = !this.parent ? new VsCode(this) : undefined;
-
-
     new SampleReadme(this, '# my project');
   }
 
