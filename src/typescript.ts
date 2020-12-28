@@ -158,7 +158,8 @@ export class TypeScriptProject extends NodeProject {
     }
 
     if (options.entrypointTypes || this.entrypoint !== '') {
-      this.manifest.types = options.entrypointTypes ?? `${path.join(path.dirname(this.entrypoint), path.basename(this.entrypoint, '.js')).replace(/\\/g, '/')}.d.ts`;
+      const entrypointTypes = options.entrypointTypes ?? `${path.join(path.dirname(this.entrypoint), path.basename(this.entrypoint, '.js')).replace(/\\/g, '/')}.d.ts`;
+      this.npmPackage.addField('types', entrypointTypes);
     }
 
     const compilerOptionDefaults: TypeScriptCompilerOptions = {
